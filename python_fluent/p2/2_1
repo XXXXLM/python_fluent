@@ -1,0 +1,18 @@
+1.容器序列，可以存放不同的数据类型
+    list
+    tuple
+    collections.deque 可以两端操作的‘列表’，可以限制长度，如果超出了长度，另一边的会自动删除
+2.扁平序列，只能容纳一种类型
+    str
+    bytes
+    bytearray bytes是不可变的，同str。bytearray是可变的，同list。
+    memoryview str和bytearray的切片操作会产生新的切片str和bytearry并拷贝数据，使用memoryview之后不会.
+    array.array
+
+容器序列存放的是它们所包含的任意类型的对象的引用,而扁平序列里存放的是值而不
+是引用。
+
+3.可变序列
+    list、bytearray、array.array、collections.deque 和 memoryview
+4.不可变序列
+    tuple、str 和 bytes
