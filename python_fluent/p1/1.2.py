@@ -72,15 +72,15 @@ c = Vector()
 d = VectorSelf(2,3)
 e = VectorSelf(3,4)
 f = VectorSelf(0,0)
-print a+b
-print d+e
-print abs(b)
-print e.mo()
-print abs(c) #0
-print bool(c) #true
-print bool(f) #true
-print a*2
-print d.mul(2)
+print(a+b)
+print(d+e)
+print(abs(b))
+print(e.mo())
+print(abs(c)) #0
+print(bool(c)) 
+print(bool(f)) #true
+print(a*2)
+print(d.mul(2))
 
 '''
 默认情况下,我们自己定义的类的实例总被认为是真的,除非这个类对 __bool__ 或者
@@ -91,5 +91,6 @@ False;否则返回 True。
 我对这段话的理解是：默认情况下，实例化的类对象使用bool(x)的时候，返回的总是true,
 但是我们现在的需求是在向量的模为0的时候，bool(x)返回false,所以定义了__bool__函数，
 但是我用debug模式调试的时候，bool(c)并没有调用到上面写的__bool__,而且返回的也是true,
-是我哪里写的不对吗
+
+解：版本原因，切换成Python3，运行结果如预期
 '''
